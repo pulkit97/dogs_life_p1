@@ -197,7 +197,8 @@ class DogsHandlerTest {
         assertEquals(expectedResult, actualResult);
     }
 
-    @Test    public  void    add_dog_and_remove_dog_return_number_of_dogs_is_zero() {
+    @Test
+    public  void    add_dog_and_remove_dog_return_number_of_dogs_is_zero() {
         // arrange
         DogsHandler cut = new DogsHandler(itsDogRepo);
         Dog theDog = new Dog();
@@ -238,7 +239,3 @@ class DogsHandlerTest {
         assertEquals(expectedResult, actualResult);
     }
     }
-
-
-
-
