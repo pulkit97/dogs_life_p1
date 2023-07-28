@@ -41,9 +41,14 @@ public long updateDogDetails(Dog dog){
         return itsDogRepo.save(dog);
     }
 
-    public boolean removeDog(long id){
+    public boolean removeDog(long uniqueId) {
+        boolean result = false;
 
-        return itsDogRepo.delete(itsDogRepo.findById(id));
+        Dog theDog = itsDogRepo.findById(uniqueId);
+        if (theDog != null) {
+            result = itsDogRepo.delete(theDog);
+        }
+
+        return result;
     }
-
-}
+                                }
