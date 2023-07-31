@@ -18,4 +18,6 @@ public interface IDogsService {
     public Dog getDogByName(String dogsName);
 
     public Dog updateDogDetails(Dog dogToUpdate);
+
+    public List<Dog> getDogGreaterThanAge(int age);
 }

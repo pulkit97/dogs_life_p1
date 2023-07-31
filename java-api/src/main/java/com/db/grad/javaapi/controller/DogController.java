@@ -26,6 +26,11 @@ public class DogController {
         return dogsService.getAllDogs();
     }
 
+    @GetMapping("/dogs_greater_than_age/{age}")
+    public List<Dog> getDogsGreaterThanAge(@PathVariable(value= "age") int age) {
+        return dogsService.getDogGreaterThanAge(age);
+    }
+
     @GetMapping("/dogs/{id}")
     public ResponseEntity<Dog> getEmployeeById(@PathVariable(value = "id") Long id)
             throws ResourceNotFoundException {

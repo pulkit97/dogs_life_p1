@@ -64,6 +64,12 @@ public class DogService implements IDogsService {
     }
 
     @Override
+    public List<Dog> getDogGreaterThanAge(int age) {
+        List<Dog> dogs = itsDogsRepo.findGreaterThanAge(age);
+        return dogs;
+    }
+
+    @Override
     public Dog updateDogDetails(Dog dogToUpdate) {
         return itsDogsRepo.save(dogToUpdate);
     }

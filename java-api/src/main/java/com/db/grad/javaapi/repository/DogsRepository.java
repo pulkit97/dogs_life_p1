@@ -11,4 +11,8 @@ import java.util.List;
 public interface DogsRepository extends JpaRepository<Dog, Long> {
     @Query(nativeQuery = true, value = "select * from dogs where name = :name")
     List<Dog> findByName(Dog name);
+
+    @Query(nativeQuery = true, value = "select * from dogs where age > :age")
+    List<Dog> findGreaterThanAge(int age);
+
 }
