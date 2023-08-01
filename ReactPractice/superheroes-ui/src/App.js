@@ -10,7 +10,6 @@ import HeroForm from './components/HeroForm';
 function App() {
   return (
     <>
-    
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="/">Heroes</Navbar.Brand>
